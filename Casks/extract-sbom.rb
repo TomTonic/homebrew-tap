@@ -8,25 +8,25 @@ cask "extract-sbom" do
         writable_paths: ["extract-sbom"]
   end
 
-  version "0.5.13"
+  version "0.5.14"
 
   on_macos do
     on_arm do
-      sha256 "bf8790dc53535b9d2af0ed9d523e99ea53a8244d7620efe0a90e68ca14ab6e3d"
+      sha256 "aeb509ce62c11499e0166a0928563eb90a35343eb6c222961ad0f7cb2a8014d3"
       url "https://github.com/TomTonic/extract-sbom/releases/download/v#{version}/extract-sbom_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "f636ac5db1c99ce48877b4bd86f97891655dd48e3f7ecab8afaca9a822f856c2"
+      sha256 "6f959b8b90fc4bc5a709ba6089426004b48948b6081ae1fc69686cba9cf7dcb4"
       url "https://github.com/TomTonic/extract-sbom/releases/download/v#{version}/extract-sbom_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "adb6bf00b698e5ce258cce8e40bef8734a3e922922f3d021d3af844197695ccd"
+      sha256 "b4ef39c30cac008b094fe776a39d0b1a577d231d5fc810abc89faf96ac1dca24"
       url "https://github.com/TomTonic/extract-sbom/releases/download/v#{version}/extract-sbom_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "69136b296ec71e391878ce5cf067b8a02dbd0895aecffedb93b27472466984c0"
+      sha256 "43efdbc4e224c96e4c22dcf143be509796a2e3d04221ed549d8cca28c8751107"
       url "https://github.com/TomTonic/extract-sbom/releases/download/v#{version}/extract-sbom_#{version}_linux_amd64.tar.gz"
     end
   end
