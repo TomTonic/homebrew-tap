@@ -8,25 +8,25 @@ cask "extract-sbom" do
         writable_paths: ["extract-sbom"]
   end
 
-  version "0.5.18"
+  version "0.5.19"
 
   on_macos do
     on_arm do
-      sha256 "e038145100ceed185f20046205b7184830a42d882ce83d61b4f3c1661682cd84"
+      sha256 "c71c5146aa02d7006f807bd748ab27ffb367bc78eb98f01045316ab46179f21b"
       url "https://github.com/TomTonic/extract-sbom/releases/download/v#{version}/extract-sbom_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "ccdb5eb6a6685dadaf7c60a65b381f3459ada292638be11da5cca7c1e7a156c6"
+      sha256 "037615e7abcea33cd88994ac4473f2375037d9b5047ca302daeb3ad9489dc60c"
       url "https://github.com/TomTonic/extract-sbom/releases/download/v#{version}/extract-sbom_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "e15d4ca0ce15524f66e137205624fa0ac3955b5475376fe7207078561d8ada43"
+      sha256 "a974b226dd935bdfc467d6710b64b42f2e2881b3627416ef9aed2319c692e49c"
       url "https://github.com/TomTonic/extract-sbom/releases/download/v#{version}/extract-sbom_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "99c59215bf56564083a173e6d19778196a96c97e3a7f30a2f15020f3b21c39a2"
+      sha256 "401c7665c1138ba042383c2e51a49ca6d3d8344959413393a92db32842af4c78"
       url "https://github.com/TomTonic/extract-sbom/releases/download/v#{version}/extract-sbom_#{version}_linux_amd64.tar.gz"
     end
   end
@@ -46,7 +46,7 @@ cask "extract-sbom" do
 
   binary "extract-sbom"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats <<~EOS
     Some input formats (CAB, 7z, MSI, RAR, InstallShield, Squashfs) need external tools that are not bundled - see https://github.com/TomTonic/extract-sbom/blob/main/INSTALL.md
